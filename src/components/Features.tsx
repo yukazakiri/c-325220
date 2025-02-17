@@ -1,22 +1,23 @@
+
 import { Card } from "@/components/ui/card";
-import { Wallet, Shield, CreditCard } from "lucide-react";
+import { Code2, Blocks, Workflow, GitFork } from "lucide-react";
 
 const Features = () => {
   const features = [
     {
-      icon: <Wallet className="w-6 h-6 text-white" />,
-      title: "Mobile Banking",
-      description: "Manage your finances on the go with our secure mobile banking platform"
+      icon: <Code2 className="w-6 h-6 text-white" />,
+      title: "TALL Stack Expertise",
+      description: "Specialists in Tailwind CSS, Alpine.js, Laravel, and Livewire development"
     },
     {
-      icon: <Shield className="w-6 h-6 text-white" />,
-      title: "Secure Transactions",
-      description: "Bank-grade security for all your transactions and personal data"
+      icon: <Blocks className="w-6 h-6 text-white" />,
+      title: "VILT Stack Solutions",
+      description: "Expert development using Vue, Inertia.js, Laravel, and Tailwind CSS"
     },
     {
-      icon: <CreditCard className="w-6 h-6 text-white" />,
-      title: "Digital Cards",
-      description: "Virtual and physical cards with advanced control features"
+      icon: <Workflow className="w-6 h-6 text-white" />,
+      title: "Custom Development",
+      description: "Scalable and maintainable web applications tailored to your needs"
     }
   ];
 
@@ -27,10 +28,10 @@ const Features = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-4xl font-bold text-white">
-              All the experience in the new application
+              Open Source Development Expertise
             </h2>
             <p className="text-xl text-white/60">
-              Simple transfers, payments for utilities, functional statements, card settings, for which you used to have to go to the branch online-banking
+              We specialize in creating powerful web applications using modern stacks, with a strong commitment to open-source development and community contribution.
             </p>
           </div>
           <div className="grid gap-6">

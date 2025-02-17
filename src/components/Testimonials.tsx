@@ -1,22 +1,23 @@
+
 import { Card } from "@/components/ui/card";
 import { MessageSquare } from "lucide-react";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "The best banking experience I've ever had. Simple, fast, and secure.",
+      quote: "Their expertise in the TALL stack helped us build a robust and scalable application.",
       author: "Sarah Johnson",
-      role: "Business Owner"
+      role: "Tech Lead"
     },
     {
-      quote: "This app has completely transformed how I manage my finances.",
+      quote: "Koamishin's commitment to open source development sets them apart from others.",
       author: "Michael Chen",
-      role: "Software Engineer"
+      role: "Project Manager"
     },
     {
-      quote: "Incredible user experience. Everything just works seamlessly.",
+      quote: "The VILT stack implementation exceeded our expectations in every way.",
       author: "Emma Davis",
-      role: "Financial Analyst"
+      role: "CTO"
     }
   ];
 
@@ -25,10 +26,10 @@ const Testimonials = () => {
       <div className="absolute inset-0 bg-accent/5 backdrop-blur-3xl"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-4xl font-bold text-white text-center mb-4">
-          What Our Users Say
+          Client Success Stories
         </h2>
         <p className="text-xl text-white/60 text-center mb-12 max-w-2xl mx-auto">
-          Join thousands of satisfied users who have transformed their banking experience
+          See how we've helped organizations achieve their goals through modern web development
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
