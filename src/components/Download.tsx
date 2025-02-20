@@ -1,32 +1,76 @@
-
 import { Button } from "@/components/ui/button";
-import { Github, Code2 } from "lucide-react";
+import { ArrowDownToLine, CheckCircle2, ShieldCheck } from "lucide-react";
 
 const Download = () => {
   return (
-    <div className="py-20 px-4 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent/5 backdrop-blur-3xl"></div>
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
-            Start Building Today
-          </h2>
-          <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            Explore our open-source projects and find the perfect solution for your business needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="px-8 py-6 text-lg bg-white text-black hover:bg-white/90 flex items-center gap-2">
-              <Github className="w-5 h-5" />
-              View on GitHub
-            </Button>
-            <Button className="px-8 py-6 text-lg glass-effect hover:bg-white/10 flex items-center gap-2">
-              <Code2 className="w-5 h-5" />
-              Documentation
-            </Button>
+    <section className="py-24 bg-background">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-white mb-4">
+          Download Our App Today!
+        </h2>
+        <p className="text-lg text-white/70 mb-8">
+          Experience the future of productivity and collaboration. Available on
+          all major platforms.
+        </p>
+
+        {/* Download Options */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Button className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6">
+            <ArrowDownToLine className="mr-2 w-5 h-5" />
+            Download for iOS
+          </Button>
+          <Button className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6">
+            <ArrowDownToLine className="mr-2 w-5 h-5" />
+            Download for Android
+          </Button>
+        </div>
+
+        {/* Key Features */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="p-6 rounded-xl bg-white/5 backdrop-blur-lg border border-white/10 hover-lift">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                <CheckCircle2 className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold text-white">
+                Cross-Platform Sync
+              </h3>
+            </div>
+            <p className="text-white/60">
+              Seamlessly sync your data across all your devices.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-xl bg-white/5 backdrop-blur-lg border border-white/10 hover-lift">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                <ShieldCheck className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold text-white">
+                Secure & Private
+              </h3>
+            </div>
+            <p className="text-white/60">
+              Your data is encrypted and stored securely.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-xl bg-white/5 backdrop-blur-lg border border-white/10 hover-lift">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center">
+                <CheckCircle2 className="w-6 h-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-semibold text-white">
+                Offline Access
+              </h3>
+            </div>
+            <p className="text-white/60">
+              Access your important data even without an internet connection.
+            </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

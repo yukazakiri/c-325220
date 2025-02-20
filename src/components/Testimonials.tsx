@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { MessageSquare } from "lucide-react";
 
@@ -33,14 +32,16 @@ const Testimonials = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-6 hover-lift glass-effect">
-              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                <MessageSquare className="w-6 h-6 text-white" />
-              </div>
-              <p className="text-white/80 mb-4 italic">{testimonial.quote}</p>
-              <div className="text-white font-semibold">{testimonial.author}</div>
-              <div className="text-white/60 text-sm">{testimonial.role}</div>
-            </Card>
+            <div className="scroll-animation">
+              <Card key={index} className="p-6 hover-lift glass-effect">
+                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+                  <MessageSquare className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-white/80 mb-4 italic">{testimonial.quote}</p>
+                <div className="text-white font-semibold">{testimonial.author}</div>
+                <div className="text-white/60 text-sm">{testimonial.role}</div>
+              </Card>
+            </div>
           ))}
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import { Card } from "@/components/ui/card";
 import { Code2, Blocks, Workflow, GitFork } from "lucide-react";
 
@@ -36,18 +35,20 @@ const Features = () => {
           </div>
           <div className="grid gap-6">
             {features.map((feature, index) => (
-              <Card 
-                key={index} 
-                className="p-6 hover-lift glass-effect flex items-start gap-4 group transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                  {feature.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
-                  <p className="text-white/60">{feature.description}</p>
-                </div>
-              </Card>
+              <div className="scroll-animation">
+                <Card 
+                  key={index} 
+                  className="p-6 hover-lift glass-effect flex items-start gap-4 group transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
+                    <p className="text-white/60">{feature.description}</p>
+                  </div>
+                </Card>
+              </div>
             ))}
           </div>
         </div>
