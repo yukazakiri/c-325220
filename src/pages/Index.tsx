@@ -35,19 +35,21 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
-      <Hero />
-      <div className="scroll-animation">
-        <Features />
-      </div>
-      <div className="scroll-animation">
-        <Testimonials />
-      </div>
-      <div className="scroll-animation">
-        <Download />
-      </div>
-      <div className="scroll-animation">
+      <div className="relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(137,137,222,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-grid-white/5 bg-[size:32px_32px] opacity-10" />
+        <Hero />
+        <div id="features" className="scroll-animation">
+          <Features />
+        </div>
+        <div id="team" className="scroll-animation">
+          <Testimonials />
+        </div>
+        <div id="download" className="scroll-animation">
+          <Download />
+        </div>
         <Footer />
       </div>
     </div>

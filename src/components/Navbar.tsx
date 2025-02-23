@@ -17,6 +17,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -80;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
       scrolled ? "bg-background/80 backdrop-blur-lg" : "bg-transparent"
@@ -32,20 +42,20 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-1">
-            <Link 
-              to="/about" 
+            <button 
+              onClick={() => scrollToSection('features')}
               className="relative px-4 py-2 text-white/80 hover:text-white group"
             >
-              <span>About</span>
+              <span>Features</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
-            </Link>
-            <Link 
-              to="/services" 
+            </button>
+            <button 
+              onClick={() => scrollToSection('team')}
               className="relative px-4 py-2 text-white/80 hover:text-white group"
             >
-              <span>Services</span>
+              <span>Team</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
-            </Link>
+            </button>
             <Link 
               to="/projects" 
               className="relative px-4 py-2 text-white/80 hover:text-white group"
@@ -80,20 +90,18 @@ const Navbar = () => {
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}>
           <div className="py-4 space-y-2">
-            <Link 
-              to="/about" 
-              className="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-              onClick={() => setIsOpen(false)}
+            <button 
+              onClick={() => scrollToSection('features')}
+              className="block w-full px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
             >
-              About
-            </Link>
-            <Link 
-              to="/services" 
-              className="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-              onClick={() => setIsOpen(false)}
+              Features
+            </button>
+            <button 
+              onClick={() => scrollToSection('team')}
+              className="block w-full px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
             >
-              Services
-            </Link>
+              Team
+            </button>
             <Link 
               to="/projects" 
               className="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
